@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Profile Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="main-title">Welcome!</h1>
+  <button id="toggle-btn">Change Background</button>
+
+  <div class="tabs">
+    <button onclick="openTab('about')">About</button>
+    <button onclick="openTab('gallery')">Gallery</button>
+    <button onclick="openTab('contact')">Contact</button>
+  </div>
+
+  <section id="about" class="tab-content">This is the About tab.</section>
+  <section id="gallery" class="tab-content" style="display:none;">
+    <img src="images/photo1.jpg" id="gallery-img" alt="Gallery" />
+    <button onclick="nextImage()">Next</button>
+  </section>
+  <section id="contact" class="tab-content" style="display:none;">
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <p id="feedback"></p>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <p id="keypress-output"></p>
+  <p id="secret-msg" style="display:none;">🎉 You found the secret!</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
